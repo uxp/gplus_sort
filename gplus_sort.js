@@ -25,36 +25,6 @@ if (document.readyState == "complete") {
 	}
 	*/
 
-	function sortStreamArray(streamArray) {
-		// mergesort...
-		if (streamArray.length <= 1) {
-			return streamArray;
-		};
-
-		var left = [];
-		var right = [];
-		var middle = [];
-		var result = [];
-
-		if (streamArray.length % 2 == 0) {
-		  middle = streamArray[streamArray.length / 2];
-		} else {
-			middle = streamArray[(streamArray.length + 1) / 2];
-		};
-
-		for (var i = 0; i <= streamArray.indexOf(middle); i++) {
-			left[i] = streamArray[i];
-			left = left.filter(function(element, index, array) {return (element != null);});
-		};
-		for (var i = streamArray.indexOf(middle); i <= streamArray.length; i++) {
-			right[i] = streamArray[i];
-			right = right.filter(function(element, index, array) {return (element != null);});
-		};
-		left = sortStreamArray(left);
-		right = sortStreamArray(right);
-		result = result.concat(sortStreamArray(left), sortStreamArray(right));
-
-		return result;
 	}
 
 
