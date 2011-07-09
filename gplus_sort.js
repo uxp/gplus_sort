@@ -11,6 +11,10 @@ if (document.readyState == "complete") {
 		}
 		return true;
 	}
+
+	// data[i][0] = timestamp
+	// data[i][1] = timestamp node
+	// data[i][2] = streampost node
 	function getStreamPosts() {
 		var $streamDiv = document.getElementsByClassName('a-b-f-i-oa');
 		if (($streamDiv.length == 1) && ($streamDiv[0].children.length > 0)) {
