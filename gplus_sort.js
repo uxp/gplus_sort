@@ -57,6 +57,8 @@ if (document.readyState == "complete") {
 				data[i][2] = $streamDiv[0].children[i];
 			}
 			// sort stream
+			var sortedData = sortStreamDivs(data);
+			if (sortedData.length != data.length) { console.log("ERROR: data returned malformed from sorting"); return false; };
 
 			// rebuild stream
 
