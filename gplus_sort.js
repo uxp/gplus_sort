@@ -11,6 +11,37 @@ if (document.readyState == "complete") {
 		}
 		return true;
 	}
+	function sortStreamDivs(streamArray) {
+		// quicksort, because I'm no CS major
+		var newStreamArray = [];
+		var less = [];
+		var greater = [];
+		var pivot = [];
+		if (streamArray.length <= 1) {
+			return streamArray;
+		};
+		if (streamArray.length % 2 == 0) {
+		  pivot = streamArray[streamArray.length / 2];
+		} else {
+			pivot = streamArray[(streamArray.length + 1) / 2];
+		};
+
+		for (var i = 0; i < streamArray.length; i++) {
+			if (streamArray[i][0] <= pivot[0]) {
+				less[i] = streamArray[i];
+				less = less.filter(function(element, index, array) {return (element != null);});
+			} else {
+				greater[i] = streamArray[i];
+				greater = greater.filter(function(element, index, array) {return (element != null);});
+			};
+		};
+		if (newStreamArray.compare(streamArray)) {
+			return newStreamArray;
+		} else {
+			return (newStreamArray.concat(sortStreamDivs(less), pivot, sortStreamDivs(greater)));
+		}
+	}
+
 
 	// data[i][0] = timestamp
 	// data[i][1] = timestamp node
