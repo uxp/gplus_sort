@@ -25,35 +25,36 @@ if (document.readyState == "complete") {
 	}
 	*/
 
-	function sortStreamDivs(streamArray) {
-		// quicksort, because I'm no CS major
-		var newStreamArray = [];
-		var less = [];
-		var greater = [];
-		var pivot = [];
+	function sortStreamArray(streamArray) {
+		// mergesort...
 		if (streamArray.length <= 1) {
 			return streamArray;
 		};
+
+		var left = [];
+		var right = [];
+		var middle = [];
+		var result = [];
+
 		if (streamArray.length % 2 == 0) {
-		  pivot = streamArray[streamArray.length / 2];
+		  middle = streamArray[streamArray.length / 2];
 		} else {
-			pivot = streamArray[(streamArray.length + 1) / 2];
+			middle = streamArray[(streamArray.length + 1) / 2];
 		};
 
-		for (var i = 0; i < streamArray.length; i++) {
-			if (streamArray[i][0] <= pivot[0]) {
-				less[i] = streamArray[i];
-				less = less.filter(function(element, index, array) {return (element != null);});
-			} else {
-				greater[i] = streamArray[i];
-				greater = greater.filter(function(element, index, array) {return (element != null);});
-			};
+		for (var i = 0; i <= streamArray.indexOf(middle); i++) {
+			left[i] = streamArray[i];
+			left = left.filter(function(element, index, array) {return (element != null);});
 		};
-		if (newStreamArray.compare(streamArray)) {
-			return newStreamArray;
-		} else {
-			return (newStreamArray.concat(sortStreamDivs(less), pivot, sortStreamDivs(greater)));
-		}
+		for (var i = streamArray.indexOf(middle); i <= streamArray.length; i++) {
+			right[i] = streamArray[i];
+			right = right.filter(function(element, index, array) {return (element != null);});
+		};
+		left = sortStreamArray(left);
+		right = sortStreamArray(right);
+		result = result.concat(sortStreamArray(left), sortStreamArray(right));
+
+		return result;
 	}
 
 
@@ -71,7 +72,7 @@ if (document.readyState == "complete") {
 				data[i][2] = $streamDiv[0].children[i];
 			}
 			// sort stream
-			var sortedData = sortStreamDivs(data);
+			var sortedData = sortStreamArray(data);
 			if (sortedData.length != data.length) { console.log("ERROR: data returned malformed from sorting"); return false; };
 
 			// rebuild stream
