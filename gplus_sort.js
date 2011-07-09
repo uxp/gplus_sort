@@ -11,6 +11,20 @@ if (document.readyState == "complete") {
 		}
 		return true;
 	}
+
+	/*
+	function findParentNode(startNode, parentClass) {
+		var testObj = startNode.parentNode;
+		var count = 0;
+		while (testObj.getAttribute('class') != parentClass) {
+			console.log(testObj.getAttribute('class'));
+			testObj = testObj.parentNode;
+			count++;
+		}
+		return testObj;
+	}
+	*/
+
 	function sortStreamDivs(streamArray) {
 		// quicksort, because I'm no CS major
 		var newStreamArray = [];
