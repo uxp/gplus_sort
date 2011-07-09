@@ -12,19 +12,6 @@ if (document.readyState == "complete") {
 		return true;
 	}
 
-	/*
-	function findParentNode(startNode, parentClass) {
-		var testObj = startNode.parentNode;
-		var count = 0;
-		while (testObj.getAttribute('class') != parentClass) {
-			console.log(testObj.getAttribute('class'));
-			testObj = testObj.parentNode;
-			count++;
-		}
-		return testObj;
-	}
-	*/
-
 	// Iterative Bubble Sort... recursion probably isn't the best for JS
 	function sortStreamArray(data) {
 		var N = data.length;
