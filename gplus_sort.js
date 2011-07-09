@@ -74,5 +74,4 @@ if (document.readyState == "complete") {
 
 	getStreamPosts();
 
-// javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://localhost/~uxp/gplus_sort.js';})();
 }
