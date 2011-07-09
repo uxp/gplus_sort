@@ -61,6 +61,12 @@ if (document.readyState == "complete") {
 			if (sortedData.length != data.length) { console.log("ERROR: data returned malformed from sorting"); return false; };
 
 			// rebuild stream
+			var newStream = document.createElement('div');
+			newStream.setAttribute('class', 'a-b-f-i-oa');
+
+			for (var i = 0; i < sortedData.length; i++) {
+				newStream.appendChild(sortedData[i][2]);
+			}
 
 			// redraw list
 		}
