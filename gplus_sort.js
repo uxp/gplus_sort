@@ -25,6 +25,19 @@ if (document.readyState == "complete") {
 	}
 	*/
 
+	// Iterative Bubble Sort... recursion probably isn't the best for JS
+	function sortStreamArray(data) {
+		var N = data.length;
+		for (var i = 0; i < N - 1; i++) {
+			for (var j = i+1; j < N; j++) {
+				if ( data[i] > data[j] ) {
+					var q = data[j];
+					data[j] = data[i];
+					data[i] = q;
+				}
+			}
+		}
+		return data;
 	}
 
 
@@ -43,7 +56,8 @@ if (document.readyState == "complete") {
 			}
 			// sort stream
 			var sortedData = sortStreamArray(data);
-			if (sortedData.length != data.length) { console.log("ERROR: data returned malformed from sorting"); return false; };
+			if (sortedData.length != data.length) { console.log("ERROR: data returned malformed from sorting"); console.log(sortedData.length); return false; };
+			sortedData.reverse();
 
 			// rebuild stream
 			var newStream = document.createElement('div');
