@@ -12,5 +12,5 @@ Add a bookmark in your browser using the location:
 
 Or alternatively, drag this link to your bookmarks folder or bookmarks toolbar:
 
-    [Google+ Sort](javascript:\(function\(\){document.body.appendChild\(document.createElement\('script'\)\).src='https://raw.github.com/uxp/gplus_sort/master/gplus_sort.min.js';}\)\(\);\)
+[Google+ Sort](javascript:\(function\(\){document.body.appendChild\(document.createElement\('script'\)\).src='https://raw.github.com/uxp/gplus_sort/master/gplus_sort.min.js';}\)\(\);\)
 
