@@ -69,6 +69,7 @@ if (document.readyState == "complete") {
 			}
 
 			// redraw list
+			$streamDiv[0].parentNode.replaceChild(newStream, $streamDiv[0]);
 		}
 	}
 
