@@ -2,6 +2,7 @@
 if (document.readyState == "complete") {
 
 	// Iterative Bubble Sort... recursion probably isn't the best for JS
+	// Also, Bubble sort is only of the only sorting algorithms I know that isnt recursive.
 	function sortStreamArray(data) {
 		var N = data.length;
 		for (var i = 0; i < N - 1; i++) {

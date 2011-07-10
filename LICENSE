@@ -1,0 +1,14 @@
+Someone asked me about a License.
+
+Do whatever you want. Sell it, steal it, print copies and burn
+them, I don't care. I hacked this together in an hour (Google,
+why you use convoluted class names?) and has quite a few values
+hard-coded in it (element class names), which I expect to have
+break within the week as Google pushes new code and fixes bugs.
+
+If you fix bugs in it, cool. If it doesn't work for you, then
+fix some bugs. Thanks to Google for throwing me back into
+vanilla JS to get this done. I'll be in the corner cuddled up
+in my jQuery blanket pretending my head doesnt hurt.
+
+No warranty is given with this code, at all, not even implied.
