@@ -59,6 +59,5 @@ if (document.readyState == "complete") {
 	}
 	sortStreamPosts();
 
-	getStreamPosts();
 
 }
